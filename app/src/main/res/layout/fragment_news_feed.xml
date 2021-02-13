@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_refresh"
+    android:background="@color/white"
+    android:padding="@dimen/_10sdp"
+    tools:context=".navfragments.NewsFeedFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      >
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center_horizontal"
+                android:text="News App"
+                android:textSize="@dimen/_25ssp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:fontFamily="@font/autour_one"
+            android:text="Top-Headlines"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <ImageView
+            android:id="@+id/developer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_outline_info_24"
+            android:background="@drawable/icon_selector"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+        <HorizontalScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/white"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp">
+
+                <Button
+                    android:id="@+id/business"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_27sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:drawableLeft="@drawable/ic_outline_attach_money_24"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:background="@drawable/trends_background"
+                    android:fontFamily="@font/roboto"
+                    android:text="Business"
+                    android:textColor="#5E5E5E"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/tech"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:drawableLeft="@drawable/ic_outline_computer_24"
+                    android:background="@drawable/trends_background"
+                    android:fontFamily="@font/roboto"
+                    android:padding="@dimen/_2sdp"
+                    android:text="Technology"
+                    android:textAllCaps="true"
+                    android:textColor="#5E5E5E"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/health"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:drawableLeft="@drawable/ic_medicine"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:background="@drawable/trends_background"
+                    android:fontFamily="@font/roboto"
+                    android:padding="@dimen/_2sdp"
+                    android:text="Health"
+                    android:textAllCaps="true"
+                    android:textColor="#5E5E5E"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/sport"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:background="@drawable/trends_background"
+                    android:fontFamily="@font/roboto"
+                    android:drawableLeft="@drawable/ic_soccer"
+                    android:padding="@dimen/_2sdp"
+                    android:text="Sport"
+                    android:textAllCaps="true"
+                    android:textColor="#5E5E5E"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/science"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:background="@drawable/trends_background"
+                    android:fontFamily="@font/roboto"
+                    android:padding="@dimen/_2sdp"
+                    android:drawableLeft="@drawable/ic_outline_science"
+                    android:text="Science"
+                    android:textAllCaps="true"
+                    android:textColor="#5E5E5E"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/entertain"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:background="@drawable/trends_background"
+                    android:fontFamily="@font/roboto"
+                    android:padding="@dimen/_2sdp"
+                    android:drawableLeft="@drawable/ic_outline_music_note_24"
+                    android:text="Entertainment"
+                    android:textAllCaps="true"
+                    android:textColor="#5E5E5E"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/autour_one"
+            android:text="Breaking News"
+            android:textSize="@dimen/_17ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+                <include layout="@layout/main_news_shimmer" />
+
+                <include layout="@layout/main_news_shimmer" />
+
+                <include layout="@layout/main_news_shimmer" />
+
+                <include layout="@layout/main_news_shimmer" />
+
+                <include layout="@layout/main_news_shimmer" />
+            </LinearLayout>
+            </ScrollView>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
